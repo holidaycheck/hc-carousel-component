@@ -1,3 +1,5 @@
+import ArrowDirectionMixin from '../node_modules/elix/src/ArrowDirectionMixin.js';
+
 class HcArrowsMixin extends ArrowDirectionMixin {
 
 }

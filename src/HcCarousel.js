@@ -1,12 +1,12 @@
 import symbols from '../node_modules/elix/src/symbols.js';
 import { merge } from '../node_modules/elix/src/updates.js';
 import SlidingCarousel from '../node_modules/elix/src/SlidingCarousel.js';
-import HcArrowsMixin from './ArrowDirectionMixin';
+import HcArrowsMixin from './ArrowDirectionMixin.js';
 import PageDotsMixin from '../node_modules/elix/src/PageDotsMixin.js';
 
 // needed for the <elix-sliding-viewport> etc.
-import ArrowDirectionButton from './ArrowDirectionButton';
-import SlidingViewport from '../node_modules/elix/src/SlidingViewport.js';
+import './ArrowDirectionButton.js';
+import '../node_modules/elix/src/SlidingViewport.js';
 
 class HcCarousel extends SlidingCarousel {
 

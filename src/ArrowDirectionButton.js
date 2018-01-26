@@ -1,4 +1,4 @@
-import WrappedStandardElement from '../node_modules/elix/src/WrappedStandardElement.js';
+import ArrowDirectionButton from '../node_modules/elix/src/ArrowDirectionButton.js';
 import symbols from '../node_modules/elix/src/symbols.js';
 
 
@@ -8,7 +8,7 @@ import symbols from '../node_modules/elix/src/symbols.js';
  * We don't expect this minor component to be used in other contexts, so it's
  * not documented as a supported Elix component.
  */
-class ArrowDirectionButton extends WrappedStandardElement.wrap('button') {
+class HcArrowDirectionButton extends ArrowDirectionButton {
 
   get [symbols.template]() {
     return `
@@ -32,7 +32,6 @@ class ArrowDirectionButton extends WrappedStandardElement.wrap('button') {
         }
 
         #inner:hover:not(:disabled) {
-          background: rgba(255, 255, 255, 0.2);
           color: rgba(255, 255, 255, 0.8);
           cursor: pointer;
         }
@@ -49,6 +48,4 @@ class ArrowDirectionButton extends WrappedStandardElement.wrap('button') {
 
 }
 
-
-customElements.define('hc-arrow-direction-button', ArrowDirectionButton);
-export default ArrowDirectionButton;
+customElements.define('hc-arrow-direction-button', HcArrowDirectionButton);
