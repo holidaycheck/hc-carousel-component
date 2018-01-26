@@ -4,14 +4,16 @@
   "description": "A reusable carousel. Tries not to be opinionated, just like native HTML element ;).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ws --cors.origin=* --port 8080"
   },
   "repository": {
     "type": "git",
     "url": "https://github.hc.ag/ui/hc-carousel.git"
   },
   "dependencies": {
-    "elix": "github:elix/elix#85ed3b5a5ed9044850de4e53b4e8978b460414ca"
+    "elix": "github:elix/elix#85ed3b5a5ed9044850de4e53b4e8978b460414ca",
+    "local-web-server": "^2.4.0"
   },
   "author": "HolidayCheck",
   "license": "ISC"
