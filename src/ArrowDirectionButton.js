@@ -1,13 +1,6 @@
 import ArrowDirectionButton from '../node_modules/elix/src/ArrowDirectionButton.js';
 import symbols from '../node_modules/elix/src/symbols.js';
 
-
-/*
- * A button used by ArrowDirectionMixin for its left/right arrow buttons.
- *
- * We don't expect this minor component to be used in other contexts, so it's
- * not documented as a supported Elix component.
- */
 class HcArrowDirectionButton extends ArrowDirectionButton {
 
   get [symbols.template]() {
