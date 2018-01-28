@@ -8,6 +8,8 @@ import PageDotsMixin from '../node_modules/elix/src/PageDotsMixin.js';
 import './ArrowDirectionButton.js';
 import '../node_modules/elix/src/SlidingViewport.js';
 
+// TODO: round robbing slideshow, after last pic comes first pic again
+
 class HcCarousel extends SlidingCarousel {
 
   get updates() {
