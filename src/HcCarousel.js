@@ -2,7 +2,7 @@ import symbols from '../node_modules/elix/src/symbols.js';
 import { merge } from '../node_modules/elix/src/updates.js';
 import SlidingCarousel from '../node_modules/elix/src/SlidingCarousel.js';
 import HcArrowsMixin from './ArrowDirectionMixin.js';
-import PageDotsMixin from '../node_modules/elix/src/PageDotsMixin.js';
+import HcThumbsPreviewMixin from './ThumbsPreviewMixin.js';
 
 // needed for the <elix-sliding-viewport> etc.
 import './ArrowDirectionButton.js';
@@ -37,12 +37,11 @@ class HcCarousel extends SlidingCarousel {
         }
       </style>
       ${HcArrowsMixin.wrap(
-        PageDotsMixin.wrap(`
-          <elix-sliding-viewport id="viewport">
-            <slot></slot>
-          </elix-sliding-viewport>
-        `)
-      )}
+        HcThumbsPreviewMixin.wrap(
+        `<elix-sliding-viewport id="viewport">
+          <slot></slot>
+        </elix-sliding-viewport>`
+      ))}
     `;
   }
 
