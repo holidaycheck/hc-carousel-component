@@ -9,6 +9,7 @@ import './ArrowDirectionButton.js';
 import '../node_modules/elix/src/SlidingViewport.js';
 
 // TODO: round robbing slideshow, after last pic comes first pic again
+// TODO: show picture description text at bottom
 
 class HcCarousel extends SlidingCarousel {
 
