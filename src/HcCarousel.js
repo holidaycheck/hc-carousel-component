@@ -14,12 +14,8 @@ class HcCarousel extends SlidingCarousel {
     const base = super.updates || {};
     return merge(base, {
       $: {
-        arrowIconRight: {
-          style: {
-            color: 'green',
-          }
-          // styling the `:hover` seems not to be possible
-        },
+        arrowIconLeft: {style: {height: 'auto', width: 'auto'}},
+        arrowIconRight: {style: {height: 'auto', width: 'auto'}},
       }
     });
   }
