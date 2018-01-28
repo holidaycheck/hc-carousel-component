@@ -18,8 +18,13 @@ HcArrowsMixin.wrap = function wrap(template) {
         font-family: hc-iconfont;
         font-size: 1.5rem;
       }
-      .theButton:hover {
+      hc-arrow-direction-button:hover {
+        cursor: hand;
+      }
+      hc-arrow-direction-button:hover .theButton {
         opacity: 1;
+        color: #51a9e0;
+        border-color: #51a9e0;
       }
       
     </style>
