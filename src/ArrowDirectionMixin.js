@@ -18,6 +18,9 @@ HcArrowsMixin.wrap = function wrap(template) {
         font-family: hc-iconfont;
         font-size: 1.5rem;
       }
+      hc-arrow-direction-button {
+        padding: 2rem;
+      }
       hc-arrow-direction-button:hover {
         cursor: hand;
       }
