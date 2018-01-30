@@ -1,6 +1,11 @@
 import PageDotsMixin from '../node_modules/elix/src/PageDotsMixin.js';
 
-class HcThumbsPreviewMixin extends PageDotsMixin {
+function HcThumbsPreviewMixin(Base) {
+  // The class prototype added by the mixin.
+  class HcThumbsPreview extends PageDotsMixin(Base) {
+
+  }
+  return HcThumbsPreview;
 }
 
 HcThumbsPreviewMixin.wrap = function wrap(template) {
