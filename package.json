@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.hc.ag/ui/hc-carousel.git"
+    "url": "https://github.com/holidaycheck/hc-carousel-component"
   },
   "dependencies": {
     "elix": "github:elix/elix#85ed3b5a5ed9044850de4e53b4e8978b460414ca",
