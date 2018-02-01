@@ -1,45 +1,30 @@
-import * as symbols from '../node_modules/elix/src/symbols.js';
-import { merge } from '../node_modules/elix/src/updates.js';
+import { symbols, updates } from './elix.js';
+const merge = updates.merge;
 
-import ElementBase from '../node_modules/elix/src/ElementBase.js';
-import AriaListMixin from '../node_modules/elix/src/AriaListMixin.js';
-import ContentItemsMixin from '../node_modules/elix/src/ContentItemsMixin.js';
-import DirectionSelectionMixin from '../node_modules/elix/src/DirectionSelectionMixin.js';
-import FocusVisibleMixin from '../node_modules/elix/src/FocusVisibleMixin.js';
-import KeyboardDirectionMixin from '../node_modules/elix/src/KeyboardDirectionMixin.js';
-import KeyboardMixin from '../node_modules/elix/src/KeyboardMixin.js';
-import LanguageDirectionMixin from '../node_modules/elix/src/LanguageDirectionMixin.js';
-import SingleSelectionMixin from '../node_modules/elix/src/SingleSelectionMixin.js';
-import SlotContentMixin from '../node_modules/elix/src/SlotContentMixin.js';
-import SwipeDirectionMixin from '../node_modules/elix/src/SwipeDirectionMixin.js';
-import TouchSwipeMixin from '../node_modules/elix/src/TouchSwipeMixin.js';
-import TrackpadSwipeMixin from '../node_modules/elix/src/TrackpadSwipeMixin.js';
+import * as elix from './elix.js';
 
 import HcArrowsMixin from './ArrowDirectionMixin.js';
 import HcThumbsPreviewMixin from './ThumbsPreviewMixin.js';
-
-// needed for the <elix-sliding-viewport> etc.
-import '../node_modules/elix/src/SlidingViewport.js';
 
 // TODO: round robbing slideshow, after last pic comes first pic again
 // TODO: show picture description text at bottom
 
 const Base =
-  AriaListMixin(
+  elix.AriaListMixin(
   HcArrowsMixin(
-  ContentItemsMixin(
-  DirectionSelectionMixin(
-  FocusVisibleMixin(
-  KeyboardDirectionMixin(
-  KeyboardMixin(
-  LanguageDirectionMixin(
+  elix.ContentItemsMixin(
+  elix.DirectionSelectionMixin(
+  elix.FocusVisibleMixin(
+  elix.KeyboardDirectionMixin(
+  elix.KeyboardMixin(
+  elix.LanguageDirectionMixin(
   HcThumbsPreviewMixin(
-  SingleSelectionMixin(
-  SlotContentMixin(
-  SwipeDirectionMixin(
-  TouchSwipeMixin(
-  TrackpadSwipeMixin(
-    ElementBase
+  elix.SingleSelectionMixin(
+  elix.SlotContentMixin(
+  elix.SwipeDirectionMixin(
+  elix.TouchSwipeMixin(
+  elix.TrackpadSwipeMixin(
+    elix.ElementBase
   ))))))))))))));
 
 class HcCarousel extends Base {

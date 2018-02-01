@@ -1,13 +1,9 @@
-import * as symbols from '../node_modules/elix/src/symbols.js';
-import { merge } from '../node_modules/elix/src/updates.js';
+import * as elix from './elix.js';
+const merge = elix.updates.merge;
 
-import PageDotsMixin from '../node_modules/elix/src/PageDotsMixin.js';
-import ElementBase from '../node_modules/elix/src/ElementBase.js';
+class Thumb extends elix.ElementBase {
 
-
-class Thumb extends ElementBase {
-
-  get [symbols.template]() {
+  get [elix.symbols.template]() {
     return `
       <img src="">
     `;
@@ -25,7 +21,7 @@ class Thumb extends ElementBase {
 
 function HcThumbsPreviewMixin(Base) {
   // The class prototype added by the mixin.
-  class HcThumbsPreview extends PageDotsMixin(Base) {
+  class HcThumbsPreview extends elix.PageDotsMixin(Base) {
     get pageDots() {
       return [
         //new Thumb()
