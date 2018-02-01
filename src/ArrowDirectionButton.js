@@ -1,5 +1,5 @@
 import ArrowDirectionButton from '../node_modules/elix/src/ArrowDirectionButton.js';
-import symbols from '../node_modules/elix/src/symbols.js';
+import * as symbols from '../node_modules/elix/src/symbols.js';
 
 class HcArrowDirectionButton extends ArrowDirectionButton {
 

@@ -1,4 +1,4 @@
-import symbols from '../node_modules/elix/src/symbols.js';
+import * as symbols from '../node_modules/elix/src/symbols.js';
 import { merge } from '../node_modules/elix/src/updates.js';
 
 import PageDotsMixin from '../node_modules/elix/src/PageDotsMixin.js';
