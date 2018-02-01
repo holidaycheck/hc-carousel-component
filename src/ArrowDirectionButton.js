@@ -1,9 +1,8 @@
-import ArrowDirectionButton from '../node_modules/elix/src/ArrowDirectionButton.js';
-import * as symbols from '../node_modules/elix/src/symbols.js';
+import * as elix from './elix.js';
 
-class HcArrowDirectionButton extends ArrowDirectionButton {
+class HcArrowDirectionButton extends elix.ArrowDirectionButton {
 
-  get [symbols.template]() {
+  get [elix.symbols.template]() {
     return `
       <style>
         :host(:not([hidden])) {

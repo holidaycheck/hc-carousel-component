@@ -1,9 +1,9 @@
-import ArrowDirectionMixin from '../node_modules/elix/src/ArrowDirectionMixin.js';
+import * as elix from './elix.js';
 import './ArrowDirectionButton.js';
 
 function HcArrowsMixin(Base) {
   // The class prototype added by the mixin.
-  return class HcArrows extends ArrowDirectionMixin(Base) {
+  return class HcArrows extends elix.ArrowDirectionMixin(Base) {
 
   }
 }

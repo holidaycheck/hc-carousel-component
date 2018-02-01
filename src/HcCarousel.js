@@ -1,7 +1,5 @@
-import { symbols, updates } from './elix.js';
-const merge = updates.merge;
-
 import * as elix from './elix.js';
+const merge = elix.updates.merge;
 
 import HcArrowsMixin from './ArrowDirectionMixin.js';
 import HcThumbsPreviewMixin from './ThumbsPreviewMixin.js';
@@ -57,7 +55,7 @@ class HcCarousel extends Base {
     });
   }
 
-  get [symbols.template]() {
+  get [elix.symbols.template]() {
     return `
       <style>
         :host {
