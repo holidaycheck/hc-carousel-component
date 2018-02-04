@@ -1,5 +1,12 @@
 # About
 
+This is a HolidayCheck customized `<elix-carousel>`. The various UI adjustments to make
+we try out here. Want to play with it, [try it out here][try-out].
+
+[try-out]: https://rawgit.com/holidaycheck/hc-carousel-component/master/demo/single-image/index.html
+
+# Details
+
 The simplest use case, a carousel for images.
 ```
 <hc-carousel>
