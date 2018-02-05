@@ -52,6 +52,27 @@ class HcCarousel extends elix.SlidingCarousel {
       // pageDot: 'hc-page-dot'
     });
   }
+  get updates() {
+    const arrowButtonStyle = {
+      'color': '#043967',
+      'border-radius': '7.14286rem',
+      'border': '1px solid #c2c7cc',
+      'background-color': '#fff',
+      'padding': '.5rem',
+      'opacity': '.5',
+      'transition': 'opacity .5s',
+    };
+    return merge(super.updates, {
+      $: {
+        arrowIconLeft: {
+          style: arrowButtonStyle,
+        },
+        arrowIconRight: {
+          style: arrowButtonStyle,
+        }
+      }
+    });
+  }
 }
 customElements.define('hc-carousel', HcCarousel);
 
