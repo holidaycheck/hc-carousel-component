@@ -8,6 +8,11 @@ import '../../src/HcArrowButton.js';
 
 // Shows how a carousel subclass can define custom tags for the arrows and dots.
 class HcCarousel extends elix.SlidingCarousel {
+  get defaultState() {
+    return Object.assign({}, super.defaultState, {
+      selectionWraps: true,
+    });
+  }
   get tags() {
     return Object.assign({}, super.tags, {
       arrowButton: 'hc-arrow-button',
