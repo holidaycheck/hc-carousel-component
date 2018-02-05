@@ -15,20 +15,16 @@ class HcArrowButton extends elix.WrappedStandardElement.wrap('button') {
         
         #inner {
           background: transparent;
-          border: 1px solid transparent;
-          box-sizing: border-box;
-          color: rgba(255, 255, 255, 0.7);
-          fill: currentColor;
-          flex: 1;
-          margin: 0;
-          outline: none;
-          padding: 0;
-          position: relative;
-          transition: opacity 1s;
+          border: 0;
+          padding: 1.5rem;
+          fill: #043967;
+          opacity: 0.5;
+          transition: opacity .5s;
         }
 
         #inner:hover:not(:disabled) {
-          color: rgba(255, 255, 255, 0.8);
+          opacity: 1;
+          fill: #51a9e0;
           cursor: pointer;
         }
 
@@ -54,13 +50,12 @@ class HcCarousel extends elix.SlidingCarousel {
   }
   get updates() {
     const arrowButtonStyle = {
-      'color': '#043967',
+      height: '38px',
+      width: '38px',
       'border-radius': '7.14286rem',
       'border': '1px solid #c2c7cc',
       'background-color': '#fff',
-      'padding': '.5rem',
-      'opacity': '.5',
-      'transition': 'opacity .5s',
+      // border-color: #51a9e0;  <<<- the hover color, dont know where it goes :)
     };
     return merge(super.updates, {
       $: {
