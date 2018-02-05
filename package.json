@@ -12,7 +12,7 @@
     "url": "https://github.com/holidaycheck/hc-carousel-component"
   },
   "dependencies": {
-    "elix": "github:elix/elix#7e5fca4fe5e47c365fdc8fc560d8010d3445b6a9",
+    "elix": "github:elix/elix#0aaff09be7f4e3822ec7411c7cce14b868c19447",
     "local-web-server": "^2.4.0"
   },
   "author": "HolidayCheck",
