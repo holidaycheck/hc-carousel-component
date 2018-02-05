@@ -13,6 +13,11 @@ class HcCarousel extends elix.SlidingCarousel {
       selectionWraps: true,
     });
   }
+  get [elix.symbols.template]() {
+    return this[elix.ArrowDirectionMixin.inject](
+      super[elix.symbols.template]
+    );
+  }
   get tags() {
     return Object.assign({}, super.tags, {
       arrowButton: 'hc-arrow-button',
