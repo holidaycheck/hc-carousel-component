@@ -1,12 +1,61 @@
 import * as elix from './elix.js';
 const merge = elix.updates.merge;
 
-import HcArrowsMixin from './ArrowDirectionMixin.js';
-import HcThumbsPreviewMixin from './ThumbsPreviewMixin.js';
-
 // TODO: round robbing slideshow, after last pic comes first pic again
 // TODO: show picture description text at bottom
 
+class HcArrowButton extends elix.WrappedStandardElement.wrap('button') {
+
+  get [elix.symbols.template]() {
+    return `
+      <style>
+        :host(:not([hidden])) {
+          display: flex;
+        }
+        
+        #inner {
+          background: transparent;
+          border: 1px solid transparent;
+          box-sizing: border-box;
+          color: rgba(255, 255, 255, 0.7);
+          fill: currentColor;
+          flex: 1;
+          margin: 0;
+          outline: none;
+          padding: 0;
+          position: relative;
+          transition: opacity 1s;
+        }
+
+        #inner:hover:not(:disabled) {
+          color: rgba(255, 255, 255, 0.8);
+          cursor: pointer;
+        }
+
+        #inner:disabled {
+          color: rgba(255, 255, 255, 0.3);
+        }
+      </style>
+      <button id="inner">
+        <slot></slot>
+      </button>
+    `;
+  }
+}
+customElements.define('hc-arrow-button', HcArrowButton);
+
+// Shows how a carousel subclass can define custom tags for the arrows and dots.
+class HcCarousel extends elix.SlidingCarousel {
+  get tags() {
+    return Object.assign({}, super.tags, {
+      arrowButton: 'hc-arrow-button',
+      // pageDot: 'hc-page-dot'
+    });
+  }
+}
+customElements.define('hc-carousel', HcCarousel);
+
+/*
 const Base =
   elix.AriaListMixin(
   HcArrowsMixin(
@@ -30,7 +79,6 @@ class HcCarousel extends Base {
   componentDidMount() {
     if (super.componentDidMount) { super.componentDidMount(); }
     this.$.viewport.addEventListener('selected-index-changed', () => {
-      /** @type {any} */
       const viewport = this.$.viewport;
       this.selectedIndex = viewport.selectedIndex;
     });
@@ -77,5 +125,4 @@ class HcCarousel extends Base {
     `;
   }
 }
-
-customElements.define('hc-carousel', HcCarousel);
+*/
