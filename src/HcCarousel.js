@@ -4,7 +4,7 @@ const merge = elix.updates.merge;
 // TODO: round robbing slideshow, after last pic comes first pic again
 // TODO: show picture description text at bottom
 
-import '../../src/HcArrowButton.js';
+import '../src/HcArrowButton.js';
 
 // Shows how a carousel subclass can define custom tags for the arrows and dots.
 class HcCarousel extends elix.SlidingCarousel {
