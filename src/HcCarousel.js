@@ -1,8 +1,7 @@
 import * as elix from './elix.js';
-const merge = elix.updates.merge;
 
-// TODO: round robbing slideshow, after last pic comes first pic again
 // TODO: show picture description text at bottom
+// TODO: highlight selected thumb
 
 import '../src/HcArrowButton.js';
 import {ThumbsMixin} from '../src/ThumbsMixin.js';
@@ -30,7 +29,6 @@ class HcCarousel extends Base {
   get tags() {
     return Object.assign({}, super.tags, {
       arrowButton: 'hc-arrow-button',
-      // pageDot: 'hc-page-dot'
     });
   }
 }
