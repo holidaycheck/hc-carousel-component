@@ -2,6 +2,12 @@ const inject = Symbol('inject');
 
 function ThumbsMixin(Base) {
   return class Thumbs extends Base {
+    componentDidMount() {
+      if (super.componentDidMount) { super.componentDidMount(); }
+      [...this.$.wrapper.getElementsByClassName('thumb')].map((el, idx) => el.addEventListener('mouseover', () => {
+        this.selectedIndex = idx;
+      }));
+    }
     [inject](template) {
       return `
         <style>

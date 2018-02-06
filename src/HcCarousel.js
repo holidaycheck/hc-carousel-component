@@ -21,12 +21,6 @@ class HcCarousel extends Base {
       selectionWraps: true,
     });
   }
-  componentDidMount() {
-    if (super.componentDidMount) { super.componentDidMount(); }
-    [...this.$.wrapper.getElementsByClassName('thumb')].map((el, idx) => el.addEventListener('mouseover', () => {
-      this.selectedIndex = idx;
-    }));
-  }
   get [elix.symbols.template]() {
     return this[ThumbsMixin.inject](
       this[elix.ArrowDirectionMixin.inject](
