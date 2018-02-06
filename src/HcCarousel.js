@@ -5,12 +5,14 @@ const merge = elix.updates.merge;
 // TODO: show picture description text at bottom
 
 import '../src/HcArrowButton.js';
+import {ThumbsMixin} from '../src/ThumbsMixin.js';
 
 const Base =
   elix.ArrowDirectionMixin(
   elix.CustomTagsMixin(
+  ThumbsMixin(
     elix.SlidingPages
-  ));
+  )));
 
 // Shows how a carousel subclass can define custom tags for the arrows and dots.
 class HcCarousel extends Base {
@@ -26,25 +28,10 @@ class HcCarousel extends Base {
     }));
   }
   get [elix.symbols.template]() {
-    return `
-      <style>
-        .thumb {
-          margin: .5rem .5rem 0 0;
-        }
-        .thumb:hover {
-          outline: 4px solid #fad73c;
-          outline-offset: -4px;
-        }
-      </style>
-      <div id="wrapper">
-        ${this[elix.ArrowDirectionMixin.inject](
-          super[elix.symbols.template]
-        )}
-        <img class="thumb" src="./1-thumb.jpg"/>
-        <img class="thumb" src="./2-thumb.jpg"/>
-        <img class="thumb" src="./3-thumb.jpg"/>
-      </div>
-    `;
+    return this[ThumbsMixin.inject](
+      this[elix.ArrowDirectionMixin.inject](
+        super[elix.symbols.template]
+    ));
   }
   get tags() {
     return Object.assign({}, super.tags, {
