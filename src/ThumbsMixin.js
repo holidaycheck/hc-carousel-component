@@ -1,9 +1,4 @@
-import * as elix from './elix.js';
-
 const inject = Symbol('inject');
-
-const Base =
-  elix.ElementBase;
 
 function ThumbsMixin(Base) {
   return class Thumbs extends Base {
