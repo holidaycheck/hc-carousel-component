@@ -5,7 +5,7 @@ class HcArrowButton extends elix.WrappedStandardElement.wrap('button') {
   get [elix.symbols.template]() {
     return `
       <style>
-        :host(:not([hidden])) {
+        :host {
           display: flex;
         }
         
