@@ -52,25 +52,5 @@ class HcCarousel extends Base {
       // pageDot: 'hc-page-dot'
     });
   }
-  get updates() {
-    const arrowButtonStyle = {
-      height: '38px',
-      width: '38px',
-      'border-radius': '7.14286rem',
-      'border': '1px solid #c2c7cc',
-      'background-color': '#fff',
-      // border-color: #51a9e0;  <<<- the hover color, dont know where it goes :)
-    };
-    return merge(super.updates, {
-      $: {
-        arrowIconLeft: {
-          style: arrowButtonStyle,
-        },
-        arrowIconRight: {
-          style: arrowButtonStyle,
-        }
-      }
-    });
-  }
 }
 customElements.define('hc-carousel', HcCarousel);
