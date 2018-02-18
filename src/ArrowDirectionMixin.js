@@ -6,6 +6,14 @@ export function ArrowDirectionMixin(Base) {
 
   // The class prototype added by the mixin.
   return class ArrowDirection extends elix.ArrowDirectionMixin(Base) {
+    get updates() {
+      return elix.updates.merge(super.updates, {
+        $: {
+          arrowButtonLeft: {style:{ 'align-items': 'center' }},
+          arrowButtonRight: {style:{ 'align-items': 'center' }},
+        },
+      });
+    }
     [inject](template) {
       const arrowButtonTag = this.tags.arrowButton;
       return `
