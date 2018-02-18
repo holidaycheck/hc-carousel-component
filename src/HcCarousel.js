@@ -5,9 +5,10 @@ import * as elix from './elix.js';
 
 import '../src/HcArrowButton.js';
 import {ThumbsMixin} from '../src/ThumbsMixin.js';
+import {ArrowDirectionMixin} from '../src/ArrowDirectionMixin.js';
 
 const Base =
-  elix.ArrowDirectionMixin(
+  ArrowDirectionMixin(
   elix.CustomTagsMixin(
   ThumbsMixin(
     elix.SlidingPages
