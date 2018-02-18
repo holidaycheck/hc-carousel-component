@@ -8,10 +8,9 @@ import {ThumbsMixin} from '../src/ThumbsMixin.js';
 
 const Base =
   elix.ArrowDirectionMixin(
-  elix.CustomTagsMixin(
   ThumbsMixin(
     elix.SlidingPages
-  )));
+  ));
 
 // Shows how a carousel subclass can define custom tags for the arrows and dots.
 class HcCarousel extends Base {
@@ -26,9 +25,12 @@ class HcCarousel extends Base {
         super[elix.symbols.template]
     ));
   }
-  get tags() {
-    return Object.assign({}, super.tags, {
-      arrowButton: 'hc-arrow-button',
+  get defaults() {
+    const base = super.defaults || {};
+    return Object.assign({}, base, {
+      tags: Object.assign({}, base.tags, {
+        arrowButton: 'hc-arrow-button',
+      })
     });
   }
   get updates() {
