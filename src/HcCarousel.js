@@ -40,6 +40,14 @@ class HcCarousel extends Base {
         arrowButtonRight: {style:{
           'align-items': 'center',
         }},
+        arrowIconLeft: {style: {
+          height: 'auto',
+          width: 'auto',
+        }},
+        arrowIconRight: {style: {
+          height: 'auto',
+          width: 'auto',
+        }},
       },
     });
   }
