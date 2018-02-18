@@ -5,10 +5,9 @@ import * as elix from './elix.js';
 
 import '../src/HcArrowButton.js';
 import {ThumbsMixin} from '../src/ThumbsMixin.js';
-import {ArrowDirectionMixin} from '../src/ArrowDirectionMixin.js';
 
 const Base =
-  ArrowDirectionMixin(
+  elix.ArrowDirectionMixin(
   elix.CustomTagsMixin(
   ThumbsMixin(
     elix.SlidingPages
@@ -30,6 +29,18 @@ class HcCarousel extends Base {
   get tags() {
     return Object.assign({}, super.tags, {
       arrowButton: 'hc-arrow-button',
+    });
+  }
+  get updates() {
+    return elix.updates.merge(super.updates, {
+      $: {
+        arrowButtonLeft: {style:{
+          'align-items': 'center',
+        }},
+        arrowButtonRight: {style:{
+          'align-items': 'center',
+        }},
+      },
     });
   }
 }

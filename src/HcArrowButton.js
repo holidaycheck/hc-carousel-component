@@ -10,15 +10,15 @@ class HcArrowButton extends elix.WrappedStandardElement.wrap('button') {
         }
         
         #inner {
-          height: 38px;
-          width: 38px;
+          height: 48px;
+          width: 48px;
           border-radius: 7.14286rem;
           border: 1px solid #c2c7cc;
           background-color: #fff;
           
           /*background: transparent;*/
           /*border: 0;*/
-          padding: 1.5rem;
+          /*padding: 1.5rem;*/
           fill: #043967;
           opacity: 0.5;
           transition: opacity .5s;
